@@ -27,7 +27,7 @@
             {
                 return "?" + string.Join("&", array);                
             }
-            return "";
+            return "";          
         }
     }
 }

@@ -42,9 +42,6 @@
       <HintPath>..\packages\RestSharp.105.2.3\lib\net452\RestSharp.dll</HintPath>
       <Private>True</Private>
     </Reference>
-    <Reference Include="Security.Cryptography">
-      <HintPath>C:\Users\v.ostapenko\Downloads\Security.Cryptography_1.7.2\Security.Cryptography.dll</HintPath>
-    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -71,7 +68,6 @@
     <Compile Include="DTOs\UserProfilePhotos.cs" />
     <Compile Include="DTOs\Video.cs" />
     <Compile Include="DTOs\Voice.cs" />
-    <Compile Include="Interfaces\IBotApi.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="TelegramBotApi.cs" />
   </ItemGroup>

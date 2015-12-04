@@ -16,11 +16,22 @@
     {
         private readonly string _token;
 
+        /// <summary>
+        /// Initializing BotApi
+        /// </summary>
+        /// <param name="token">Your bot's token</param>
         public TelegramBotApi(string token)
         {
             _token = token;
         }
 
+        /// <summary>
+        /// Gets updates for your bot
+        /// </summary>
+        /// <param name="offset"></param>
+        /// <param name="limit"></param>
+        /// <param name="timeout"></param>
+        /// <returns></returns>
         public List<Update> GetUpdates(string offset = "", string limit = "", string timeout = "")
         {
             var coll = new NameValueCollection
@@ -35,6 +46,12 @@
             return update;
         }
 
+        /// <summary>
+        /// Set Webhook
+        /// </summary>
+        /// <param name="url">Url for post-responds</param>
+        /// <param name="cert">Your certificate</param>
+        /// <returns></returns>
         public async Task<string> SetWebhook(string url, X509Certificate2 cert)
         {
             var certBytes = cert.Export(X509ContentType.Pkcs12);
@@ -50,7 +67,10 @@
             return result;
         }
 
-
+        /// <summary>
+        /// Returns information about your bot
+        /// </summary>
+        /// <returns></returns>
         public User GetMe()
         {
             var user = JsonConvert
@@ -59,6 +79,15 @@
             return user;
         }
 
+        /// <summary>
+        /// Send message to chat
+        /// </summary>
+        /// <param name="chatId"></param>
+        /// <param name="text"></param>
+        /// <param name="parseMode"></param>
+        /// <param name="disableWebPagePreview"></param>
+        /// <param name="replyToMessageId"></param>
+        /// <param name="replyMarkup"></param>
         public void SendMessage(string chatId, string text, string parseMode = "", string disableWebPagePreview = "",
             string replyToMessageId = "", string replyMarkup = "")
         {
@@ -74,6 +103,12 @@
             RequestCore.Get("sendMessage", _token, coll).Wait();
         }
 
+        /// <summary>
+        /// Forward message
+        /// </summary>
+        /// <param name="chatId"></param>
+        /// <param name="fromChatId"></param>
+        /// <param name="messageId"></param>
         public void ForwardMessage(string chatId, string fromChatId, string messageId)
         {
             var coll = new NameValueCollection
@@ -85,6 +120,15 @@
             var kek = RequestCore.Get("forwardMessage", _token, coll).Result;
         }
 
+        /// <summary>
+        /// Send your local photo
+        /// </summary>
+        /// <param name="chatId"></param>
+        /// <param name="localPhoto"></param>
+        /// <param name="caption"></param>
+        /// <param name="replyToMessageId"></param>
+        /// <param name="replyMarkup"></param>
+        /// <returns></returns>
         public async Task<string> SendPhoto(string chatId, byte[] localPhoto, string caption = "",
             string replyToMessageId = "", string replyMarkup = "")
         {
@@ -103,6 +147,14 @@
             return result;
         }
 
+        /// <summary>
+        /// Send existing photo
+        /// </summary>
+        /// <param name="chatId"></param>
+        /// <param name="photoId"></param>
+        /// <param name="caption"></param>
+        /// <param name="replyToMessageId"></param>
+        /// <param name="replyMarkup"></param>
         public void SendPhotoById(string chatId, string photoId, string caption = "",
             string replyToMessageId = "", string replyMarkup = "")
         {
@@ -117,6 +169,17 @@
             RequestCore.Get("sendPhoto", _token, coll).Wait();
         }
 
+        /// <summary>
+        /// Send local audio file
+        /// </summary>
+        /// <param name="chatId"></param>
+        /// <param name="audio"></param>
+        /// <param name="duration"></param>
+        /// <param name="performer"></param>
+        /// <param name="title"></param>
+        /// <param name="replyToMessageId"></param>
+        /// <param name="replyMarkup"></param>
+        /// <returns></returns>
         public async Task<string> SendAudio(string chatId, byte[] audio, string duration = "", string performer = "",
             string title = "", string replyToMessageId = "", string replyMarkup = "")
         {
@@ -137,6 +200,16 @@
             return result;
         }
 
+        /// <summary>
+        /// Send existing audio
+        /// </summary>
+        /// <param name="chatId"></param>
+        /// <param name="audioId"></param>
+        /// <param name="duration"></param>
+        /// <param name="performer"></param>
+        /// <param name="title"></param>
+        /// <param name="replyToMessageId"></param>
+        /// <param name="replyMarkup"></param>
         public void SendAudioById(string chatId, string audioId, string duration = "", string performer = "",
             string title = "", string replyToMessageId = "", string replyMarkup = "")
         {
@@ -153,6 +226,14 @@
             RequestCore.Get("sendAudio", _token, coll).Wait();
         }
 
+        /// <summary>
+        /// Send voice message by id
+        /// </summary>
+        /// <param name="chatId"></param>
+        /// <param name="voiceId"></param>
+        /// <param name="duration"></param>
+        /// <param name="replyToMessageId"></param>
+        /// <param name="replyMarkup"></param>
         public void SendVoiceById(string chatId, string voiceId, string duration, string replyToMessageId,
             string replyMarkup)
         {
@@ -167,6 +248,15 @@
             RequestCore.Get("sendVoice", _token, coll).Wait();
         }
 
+        /// <summary>
+        /// Send local document
+        /// </summary>
+        /// <param name="chatId"></param>
+        /// <param name="document"></param>
+        /// <param name="fileName"></param>
+        /// <param name="replyToMessageId"></param>
+        /// <param name="replyMarkup"></param>
+        /// <returns></returns>
         public async Task<string> SendDocument(string chatId, byte[] document, string fileName,
             string replyToMessageId = "", string replyMarkup = "")
         {
@@ -184,6 +274,13 @@
             return result;
         }
 
+        /// <summary>
+        /// Send sticker by id
+        /// </summary>
+        /// <param name="chatId"></param>
+        /// <param name="sticker"></param>
+        /// <param name="replyToMessage"></param>
+        /// <param name="replyMarkup"></param>
         public void SendSticker(string chatId, string sticker, string replyToMessage = "", string replyMarkup = "")
         {
             var coll = new NameValueCollection
@@ -197,6 +294,16 @@
             RequestCore.Get("sendSticker", _token, coll).Wait();
         }
 
+        /// <summary>
+        /// Send local video
+        /// </summary>
+        /// <param name="chatId"></param>
+        /// <param name="video"></param>
+        /// <param name="duration"></param>
+        /// <param name="caption"></param>
+        /// <param name="replyToMessageId"></param>
+        /// <param name="replyMarkUp"></param>
+        /// <returns></returns>
         public async Task<string> SendVideo(string chatId, byte[] video, string duration = "", string caption = "",
             string replyToMessageId = "", string replyMarkUp = "")
         {
@@ -215,6 +322,15 @@
             return result;
         }
 
+        /// <summary>
+        /// Send video by id
+        /// </summary>
+        /// <param name="chatId"></param>
+        /// <param name="videoId"></param>
+        /// <param name="duration"></param>
+        /// <param name="caption"></param>
+        /// <param name="replyToMessageId"></param>
+        /// <param name="replyMarkUp"></param>
         public void SendVideoById(string chatId, string videoId, string duration = "", string caption = "",
             string replyToMessageId = "", string replyMarkUp = "")
         {
@@ -231,6 +347,14 @@
             RequestCore.Get("sendVideo", _token, coll).Wait();
         }
 
+        /// <summary>
+        /// Send location
+        /// </summary>
+        /// <param name="chatId"></param>
+        /// <param name="latitude"></param>
+        /// <param name="longitude"></param>
+        /// <param name="replyToMessageId"></param>
+        /// <param name="replyMarkUp"></param>
         public void SendLocation(string chatId, string latitude, string longitude, string replyToMessageId = "",
             string replyMarkUp = "")
         {
@@ -245,6 +369,11 @@
             RequestCore.Get("sendLocation", _token, coll).Wait();
         }
 
+        /// <summary>
+        /// Send chat action
+        /// </summary>
+        /// <param name="chatId"></param>
+        /// <param name="action"></param>
         public void SendChatAction(string chatId, ChatAction action)
         {
             var actionDictionary = new Dictionary<int, string>
@@ -269,6 +398,11 @@
             RequestCore.Get("sendChatAction", _token, coll).Wait();
         }
 
+        /// <summary>
+        /// Download file
+        /// </summary>
+        /// <param name="filePath">path to file in telegram</param>
+        /// <param name="path">your local path</param>
         public void DownloadFile(string filePath, string path)
         {
             var remoteUri = string.Format("https://api.telegram.org/bot{0}/{1}", _token, filePath);
@@ -280,6 +414,13 @@
             }
         }
 
+        /// <summary>
+        /// Get user profile photos
+        /// </summary>
+        /// <param name="userId"></param>
+        /// <param name="offset"></param>
+        /// <param name="limit"></param>
+        /// <returns></returns>
         public UserProfilePhotos GetUserProfilePhotos(string userId, string offset = "", string limit = "")
         {
             var coll = new NameValueCollection
@@ -295,6 +436,11 @@
             return photos;
         }
 
+        /// <summary>
+        /// Get information about file
+        /// </summary>
+        /// <param name="fileId"></param>
+        /// <returns></returns>
         public File GetFile(string fileId)
         {
             var coll = new NameValueCollection

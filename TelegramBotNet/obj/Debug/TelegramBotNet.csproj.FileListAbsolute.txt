@@ -1,0 +1,11 @@
+D:\Other\Upwork\TelegramBotNet\TelegramBotNet\bin\Debug\TelegramBotNet.dll
+D:\Other\Upwork\TelegramBotNet\TelegramBotNet\bin\Debug\TelegramBotNet.pdb
+D:\Other\Upwork\TelegramBotNet\TelegramBotNet\bin\Debug\JsonFx.dll
+D:\Other\Upwork\TelegramBotNet\TelegramBotNet\bin\Debug\Newtonsoft.Json.dll
+D:\Other\Upwork\TelegramBotNet\TelegramBotNet\bin\Debug\JsonFx.xml
+D:\Other\Upwork\TelegramBotNet\TelegramBotNet\bin\Debug\Newtonsoft.Json.xml
+D:\Other\Upwork\TelegramBotNet\TelegramBotNet\obj\Debug\TelegramBotNet.dll
+D:\Other\Upwork\TelegramBotNet\TelegramBotNet\obj\Debug\TelegramBotNet.pdb
+D:\Other\Upwork\TelegramBotNet\TelegramBotNet\bin\Debug\RestSharp.dll
+D:\Other\Upwork\TelegramBotNet\TelegramBotNet\bin\Debug\RestSharp.xml
+D:\Other\Upwork\TelegramBotNet\TelegramBotNet\obj\Debug\TelegramBotNet.csprojResolveAssemblyReference.cache

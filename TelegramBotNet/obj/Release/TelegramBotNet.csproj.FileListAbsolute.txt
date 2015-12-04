@@ -1,0 +1,14 @@
+D:\Other\Upwork\TelegramBotNet\TelegramBotNet\bin\Release\TelegramBotNet.dll
+D:\Other\Upwork\TelegramBotNet\TelegramBotNet\bin\Release\TelegramBotNet.pdb
+D:\Other\Upwork\TelegramBotNet\TelegramBotNet\bin\Release\JsonFx.dll
+D:\Other\Upwork\TelegramBotNet\TelegramBotNet\bin\Release\Newtonsoft.Json.dll
+D:\Other\Upwork\TelegramBotNet\TelegramBotNet\bin\Release\RestSharp.dll
+D:\Other\Upwork\TelegramBotNet\TelegramBotNet\bin\Release\Security.Cryptography.dll
+D:\Other\Upwork\TelegramBotNet\TelegramBotNet\bin\Release\JsonFx.xml
+D:\Other\Upwork\TelegramBotNet\TelegramBotNet\bin\Release\Newtonsoft.Json.xml
+D:\Other\Upwork\TelegramBotNet\TelegramBotNet\bin\Release\RestSharp.xml
+D:\Other\Upwork\TelegramBotNet\TelegramBotNet\bin\Release\Security.Cryptography.pdb
+D:\Other\Upwork\TelegramBotNet\TelegramBotNet\bin\Release\Security.Cryptography.xml
+D:\Other\Upwork\TelegramBotNet\TelegramBotNet\obj\Release\TelegramBotNet.csprojResolveAssemblyReference.cache
+D:\Other\Upwork\TelegramBotNet\TelegramBotNet\obj\Release\TelegramBotNet.dll
+D:\Other\Upwork\TelegramBotNet\TelegramBotNet\obj\Release\TelegramBotNet.pdb

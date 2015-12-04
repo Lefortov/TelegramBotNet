@@ -1,7 +1,7 @@
 # TelegramBotNet
 This is a simple C# wrapper for telegram bot-API methods(https://core.telegram.org/bots/api)
 
-Download from Nu-get: Install-Package TelegramBotNet
+Download from Nu-get: ```Install-Package TelegramBotNet```
 
 Usage:
 

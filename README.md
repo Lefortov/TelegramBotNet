@@ -6,7 +6,7 @@ Download from Nu-get:
 Usage:
 
 <code>
-TelegramBotApi api = new TelegramBotApi("Your bot token here, for example: 152319005:AAGgDQzm9Us3pPoWHc9gE4tFUIzSqNBjLsk");
+TelegramBotApi api = new TelegramBotApi("Your bot token here, for example: 152319005:AAGgDQzm9Us3pPoWHc9gE4tFUIzSqNBjLsk");<br\>
 var updates = api.GetUpdates(); 
 var chatId = updates[0].Message.Chat.Id.ToString();
 api.SendMessage(chatId, "Example");

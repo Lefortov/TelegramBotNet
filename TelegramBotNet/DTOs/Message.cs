@@ -80,10 +80,12 @@
         [JsonProperty(PropertyName = "channel_chat_created")]
         public bool ChangelChatCreated { get; set; }
 
+        /* Since supergroups were added into Telegram, the migrate_to_chat_id values */
+        /* from moving to supergroups no longer fit inside of an Int32 container. */
         [JsonProperty(PropertyName = "migrate_to_chat_id")]
-        public int MigrateToChatId { get; set; }
+        public long MigrateToChatId { get; set; }
 
         [JsonProperty(PropertyName = "migrate_from_chat_id")]
-        public int MigrateFromChatId { get; set; }
+        public long MigrateFromChatId { get; set; }
     }
 }
